@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { 
   Settings, 
   Shield, 
@@ -8,15 +9,22 @@ import {
   Hammer,
   HardHat,
   Zap,
-  Wind
+  Wind,
+  ArrowRight
 } from "lucide-react";
 import productsImage from "@/assets/products-bg.jpg";
+import { useNavigate } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Products = () => {
+  const navigate = useNavigate();
+  const { language, t } = useLanguage();
+  
   const productCategories = [
     {
       icon: Shield,
       title: "Fire & Safety Equipment",
+      slug: "fire-safety",
       items: [
         "Safety Boots & Shoes",
         "Safety Cones & Helmets",
@@ -31,6 +39,7 @@ export const Products = () => {
     {
       icon: Settings,
       title: "Bearings",
+      slug: "bearings",
       items: [
         "SKF Bearings",
         "FAG Bearings",
@@ -45,6 +54,7 @@ export const Products = () => {
     {
       icon: Cog,
       title: "Power Transmission",
+      slug: "power-transmission",
       items: [
         "Timing Belts",
         "Optibelt Products",
@@ -59,6 +69,7 @@ export const Products = () => {
     {
       icon: Wrench,
       title: "Sealing Solutions",
+      slug: "sealing-solutions",
       items: [
         "Rubber Sheet",
         "Paper Gasket",
@@ -73,6 +84,7 @@ export const Products = () => {
     {
       icon: Hammer,
       title: "Tools & Hardware",
+      slug: "tools-hardware",
       items: [
         "STANLEY Tools",
         "Drill Bits",
@@ -87,6 +99,7 @@ export const Products = () => {
     {
       icon: Wind,
       title: "HVAC & Refrigeration",
+      slug: "hvac",
       items: [
         "Freon Gas",
         "Compressors",
@@ -100,6 +113,7 @@ export const Products = () => {
     {
       icon: Zap,
       title: "Electrical & Consumables",
+      slug: "electrical",
       items: [
         "Electric Tape",
         "Abrasive Paper",
@@ -113,6 +127,7 @@ export const Products = () => {
     {
       icon: HardHat,
       title: "Pneumatic Systems",
+      slug: "pneumatic",
       items: [
         "Pneumatic Fittings",
         "Pneumatic Pipes",
@@ -183,10 +198,19 @@ export const Products = () => {
               </ul>
 
               {/* Item Count Badge */}
-              <div className="mt-4 pt-4 border-t border-border">
+              <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
                 <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
-                  {category.items.length} Products
+                  {category.items.length} {t('products.items')}
                 </Badge>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => navigate(`/products/${category.slug}`)}
+                  className="text-accent hover:text-accent/80 gap-1 px-2"
+                >
+                  {t('products.viewDetails')}
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
               </div>
             </Card>
           ))}

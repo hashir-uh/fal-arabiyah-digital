@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { LanguageToggle } from "./LanguageToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,11 +24,11 @@ export const Navigation = () => {
   };
 
   const navLinks = [
-    { label: "Home", id: "home" },
-    { label: "About", id: "about" },
-    { label: "Products", id: "products" },
-    { label: "Brands", id: "brands" },
-    { label: "Contact", id: "contact" }
+    { label: t('nav.home'), id: "home" },
+    { label: t('nav.about'), id: "about" },
+    { label: t('nav.products'), id: "products" },
+    { label: t('nav.brands'), id: "brands" },
+    { label: t('nav.contact'), id: "contact" }
   ];
 
   return (
@@ -49,7 +52,7 @@ export const Navigation = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -61,6 +64,7 @@ export const Navigation = () => {
                 {link.label}
               </button>
             ))}
+            <LanguageToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,6 +95,9 @@ export const Navigation = () => {
                   {link.label}
                 </button>
               ))}
+              <div className="px-4">
+                <LanguageToggle />
+              </div>
             </div>
           </div>
         )}
