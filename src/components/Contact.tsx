@@ -82,7 +82,7 @@ export const Contact = () => {
         </div>
 
         {/* CTA Card */}
-        <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-gradient-hero border-2 border-accent/20 shadow-strong">
+        <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-primary border-2 border-accent/20 shadow-strong">
           <div className="text-center space-y-6">
             <h3 className="text-3xl md:text-4xl font-bold text-primary-foreground font-['Rajdhani']">
               Ready to Order?
@@ -95,7 +95,7 @@ export const Contact = () => {
               <Button 
                 size="lg"
                 asChild
-                className="bg-accent hover:bg-accent/90 text-primary font-semibold px-8 py-6 text-lg shadow-glow transition-all hover:scale-105"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-glow transition-all hover:scale-105"
               >
                 <a href="tel:0114124198">
                   <Phone className="mr-2 h-5 w-5" />
@@ -106,7 +106,7 @@ export const Contact = () => {
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-2 border-primary-foreground/80 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-6 text-lg transition-all hover:scale-105"
+                className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold px-8 py-6 text-lg border-2 border-accent/50 hover:border-accent transition-all hover:scale-105"
               >
                 <a href="mailto:falarabiya@outlook.com">
                   <Send className="mr-2 h-5 w-5" />
