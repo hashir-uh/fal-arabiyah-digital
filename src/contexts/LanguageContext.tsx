@@ -81,6 +81,10 @@ const translations: Record<Language, Record<string, string>> = {
     'about.credentials.2': 'Authorized Distributor for Leading Brands',
     'about.credentials.3': 'Extensive Product Range & Stock',
     'about.credentials.4': 'Technical Support & Consultation',
+    'about.companyInfo.cr': 'Company Registration',
+    'about.companyInfo.location': 'Location',
+    'about.companyInfo.country': 'Country',
+    'about.companyInfo.website': 'Website',
     
     // Products
     'products.title': 'Our',
@@ -164,6 +168,10 @@ const translations: Record<Language, Record<string, string>> = {
     'about.credentials.2': 'موزع معتمد للعلامات التجارية الرائدة',
     'about.credentials.3': 'مجموعة منتجات واسعة ومخزون',
     'about.credentials.4': 'الدعم الفني والاستشارات',
+    'about.companyInfo.cr': 'سجل تجاري',
+    'about.companyInfo.location': 'الموقع',
+    'about.companyInfo.country': 'الدولة',
+    'about.companyInfo.website': 'الموقع الإلكتروني',
     
     // Products
     'products.title': 'منتجاتنا',

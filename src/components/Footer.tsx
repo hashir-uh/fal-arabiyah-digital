@@ -1,6 +1,8 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -10,30 +12,35 @@ export const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-4 font-['Rajdhani']">
-              FAL ARABIYAH
+              {t('about.titleHighlight')}
             </h3>
             <p className="text-primary-foreground/80 leading-relaxed mb-4">
-              Your trusted partner for industrial spare parts in Riyadh. 
-              Quality products and excellent service since 2015.
+              {t('footer.description')}
             </p>
             <p className="text-sm text-primary-foreground/60">
-              C.R: 1010726314
+              {t('contact.registration')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-bold mb-4 font-['Rajdhani']">
-              Quick Links
+              {t('footer.quickLinks')}
             </h4>
             <ul className="space-y-2">
-              {["Home", "About", "Products", "Brands", "Contact"].map((link) => (
-                <li key={link}>
+              {[
+                { key: 'nav.home', href: 'home' },
+                { key: 'nav.about', href: 'about' },
+                { key: 'nav.products', href: 'products' },
+                { key: 'nav.brands', href: 'brands' },
+                { key: 'nav.contact', href: 'contact' }
+              ].map((link) => (
+                <li key={link.key}>
                   <a 
-                    href={`#${link.toLowerCase()}`}
+                    href={`#${link.href}`}
                     className="text-primary-foreground/80 hover:text-accent transition-colors"
                   >
-                    {link}
+                    {t(link.key)}
                   </a>
                 </li>
               ))}
@@ -43,7 +50,7 @@ export const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-bold mb-4 font-['Rajdhani']">
-              Contact Us
+              {t('nav.contact')}
             </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
@@ -69,8 +76,8 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  Rail Street, Batha<br />
-                  Riyadh, Saudi Arabia
+                  {t('contact.address1')}<br />
+                  {t('contact.address2')}
                 </span>
               </li>
             </ul>
@@ -81,7 +88,7 @@ export const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/60 text-sm text-center md:text-left">
-              © {currentYear} FAL ARABIYAH Trading Est. All rights reserved.
+              © {currentYear} {t('about.titleHighlight')}. {t('footer.rights')}
             </p>
             <p className="text-primary-foreground/60 text-sm text-center md:text-right">
               Website: <a href="https://www.falarabiya.com" className="text-accent hover:underline">www.falarabiya.com</a>

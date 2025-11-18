@@ -218,11 +218,9 @@ export const Products = () => {
 
         {/* Additional Info */}
         <div className="mt-16 text-center">
-          <Card className="max-w-3xl mx-auto p-8 bg-gradient-hero border-2 border-accent/20 shadow-strong">
+          <Card className="max-w-3xl mx-auto p-8 bg-primary border-2 border-accent/20 shadow-strong">
             <p className="text-primary-foreground text-lg leading-relaxed">
-              <span className="font-bold text-accent">All products</span> are sourced from 
-              trusted manufacturers and come with <span className="font-bold text-accent">quality assurance</span>. 
-              We maintain competitive pricing while never compromising on quality.
+              {t('products.quality.text')}
             </p>
           </Card>
         </div>
