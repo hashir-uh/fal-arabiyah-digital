@@ -1,31 +1,34 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Contact = () => {
+  const { t } = useLanguage();
+  
   const contactInfo = [
     {
       icon: Phone,
-      title: "Phone",
+      title: t('contact.phone'),
       details: ["0114124198", "0566384950"],
       href: "tel:0114124198"
     },
     {
       icon: Mail,
-      title: "Email",
+      title: t('contact.email'),
       details: ["falarabiya@outlook.com"],
       href: "mailto:falarabiya@outlook.com"
     },
     {
       icon: MapPin,
-      title: "Address",
-      details: ["Rail Street, Batha", "Riyadh, Saudi Arabia"],
+      title: t('contact.address'),
+      details: [t('contact.address1'), t('contact.address2')],
       href: null
     },
     {
       icon: Clock,
-      title: "Business Hours",
-      details: ["Saturday - Thursday", "8:00 AM - 6:00 PM"],
+      title: t('contact.hours'),
+      details: [t('contact.hours1'), t('contact.hours2')],
       href: null
     }
   ];
@@ -39,11 +42,11 @@ export const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-['Rajdhani']">
-            Get In <span className="text-gradient">Touch</span>
+            {t('contact.title')} <span className="text-gradient">{t('contact.titleHighlight')}</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6 rounded-full" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have questions about our products? Our team is ready to assist you
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -55,8 +58,8 @@ export const Contact = () => {
               className="p-6 bg-card border-2 hover:border-accent/50 transition-all hover:scale-105 shadow-soft hover:shadow-medium group"
             >
               <div className="text-center">
-                <div className="w-14 h-14 bg-gradient-accent rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-glow group-hover:scale-110 transition-transform">
-                  <info.icon className="h-7 w-7 text-primary-foreground" />
+                <div className="w-14 h-14 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-glow group-hover:scale-110 transition-transform">
+                  <info.icon className="h-7 w-7 text-accent-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3 font-['Rajdhani']">
                   {info.title}
@@ -85,11 +88,10 @@ export const Contact = () => {
         <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-primary border-2 border-accent/20 shadow-strong">
           <div className="text-center space-y-6">
             <h3 className="text-3xl md:text-4xl font-bold text-primary-foreground font-['Rajdhani']">
-              Ready to Order?
+              {t('contact.cta.title')}
             </h3>
             <p className="text-primary-foreground/90 text-lg leading-relaxed max-w-2xl mx-auto">
-              Contact us today for quotes, product availability, or technical specifications. 
-              Our experienced team is here to help you find the perfect industrial spare parts solution.
+              {t('contact.cta.text')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button 
@@ -99,7 +101,7 @@ export const Contact = () => {
               >
                 <a href="tel:0114124198">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call Now
+                  {t('contact.cta.call')}
                 </a>
               </Button>
               <Button 
@@ -110,7 +112,7 @@ export const Contact = () => {
               >
                 <a href="mailto:falarabiya@outlook.com">
                   <Send className="mr-2 h-5 w-5" />
-                  Send Email
+                  {t('contact.cta.email')}
                 </a>
               </Button>
             </div>
@@ -120,7 +122,7 @@ export const Contact = () => {
         {/* Company Registration Info */}
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            FAL ARABIYAH TRADING EST. | C.R: 1010726314 | Kingdom of Saudi Arabia
+            {t('contact.registration')}
           </p>
         </div>
       </div>

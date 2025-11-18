@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
@@ -39,7 +42,7 @@ export const Hero = () => {
         <div className="text-center mb-8 animate-slide-up">
           <div className="inline-block px-6 py-2 bg-accent/90 backdrop-blur-sm rounded-full shadow-glow">
             <p className="text-primary-foreground font-bold tracking-wider text-sm md:text-base font-['Rajdhani']">
-              INDUSTRIAL SPARE PARTS
+              {t('hero.title').toUpperCase()}
             </p>
           </div>
         </div>
@@ -47,16 +50,15 @@ export const Hero = () => {
         <div className="text-center max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 font-['Rajdhani'] leading-tight">
-            FAL ARABIYAH
+            {t('about.titleHighlight')}
           </h1>
           
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-gradient mb-8 font-['Rajdhani']">
-            Your Partner in Industrial Spare Parts
+            {t('hero.title')}
           </h2>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            An established and popular company with an excellent track record for the best customer satisfaction. 
-            We have never compromised on the quality and service provided to customers at very competitive prices.
+            {t('hero.subtitle')}
           </p>
 
           {/* CTA Buttons */}
@@ -66,7 +68,7 @@ export const Hero = () => {
               onClick={() => scrollToSection('products')}
               className="bg-accent hover:bg-accent/90 text-primary font-semibold px-8 py-6 text-lg shadow-glow transition-all hover:scale-105"
             >
-              Explore Products
+              {t('hero.cta')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
@@ -75,7 +77,7 @@ export const Hero = () => {
               onClick={() => scrollToSection('contact')}
               className="border-2 border-primary-foreground/80 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-6 text-lg transition-all hover:scale-105"
             >
-              Contact Us
+              {t('hero.contact')}
             </Button>
           </div>
 

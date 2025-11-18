@@ -1,6 +1,9 @@
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Brands = () => {
+  const { t } = useLanguage();
+  
   const brands = [
     { name: "SKF", category: "Bearings" },
     { name: "FAG", category: "Bearings" },
@@ -23,11 +26,11 @@ export const Brands = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-['Rajdhani']">
-            Trusted <span className="text-gradient">Brands</span>
+            {t('brands.title')} <span className="text-gradient">{t('brands.titleHighlight')}</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6 rounded-full" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We partner with world-leading manufacturers to bring you the best quality products
+            {t('brands.subtitle')}
           </p>
         </div>
 
@@ -54,13 +57,10 @@ export const Brands = () => {
         <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-accent/20 shadow-medium">
           <div className="text-center space-y-4">
             <h3 className="text-2xl md:text-3xl font-bold text-primary font-['Rajdhani']">
-              Authorized Distributor
+              {t('about.credentials.2')}
             </h3>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              As an authorized distributor of these premium brands, we guarantee 
-              <span className="font-bold text-accent"> 100% authentic products</span> with 
-              full manufacturer warranties and technical support. Our extensive inventory 
-              ensures immediate availability for most products.
+              {t('products.quality.text')}
             </p>
           </div>
         </Card>
