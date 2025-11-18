@@ -1,8 +1,8 @@
-# Welcome to your Lovable project
+# Welcome to Fal Arabiyah project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/9077d49d-13a2-48a6-a02b-7e4ea514ba53
+**URL**: https://falarabiyah.com/
 
 ## How can I edit this code?
 
