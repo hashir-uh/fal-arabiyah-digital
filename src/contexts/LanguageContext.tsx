@@ -55,8 +55,9 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Contact',
     
     // Hero
+    'hero.top.title': 'Industrial Spare Parts',
     'hero.title': 'Your Partner in Industrial Spare Parts',
-    'hero.subtitle': 'An Established and popular company with an excellent track record for the best customer satisfaction, we have never been compromised on the quality and the service',
+    'hero.subtitle': 'An established and popular company with an excellent track record for the best customer satisfaction. We have never been compromised on the quality and the service provided to customers at very competitive prices.',
     'hero.cta': 'Explore Products',
     'hero.contact': 'Contact Us',
     'hero.stats.experience': 'Years Experience',
@@ -68,12 +69,16 @@ const translations: Record<Language, Record<string, string>> = {
     'about.title': 'About',
     'about.titleHighlight': 'FAL ARABIYAH',
     'about.story.title': 'Our Story',
-    'about.story.text': 'FAL ARABIYAH has been a trusted name in industrial spare parts for years. We specialize in providing high-quality products to industries across Saudi Arabia, maintaining the highest standards of service and reliability.',
+    'about.story.title.text': 'Located in Rail Street Batha, Riyadh, we have been supplying industrial materials with excellence for nearly a decade',
+    'about.story.text': 'FAL ARABIYAH Trading Est. has been a trusted name in industrial spare parts for years. We specialize in providing high-quality products to industries across Saudi Arabia, maintaining the highest standards of service and reliability.',
     'about.values.title': 'Our Core Values',
+    'about.values.subtitle': 'The principles that drive our commitment to excellence',
     'about.values.quality': 'Premium Quality',
     'about.values.qualityDesc': 'Only certified and tested products',
     'about.values.reliability': 'Reliable Service',
     'about.values.reliabilityDesc': 'On-time delivery and support',
+    'about.values.precision': 'Precision',
+    'about.values.precisionDesc': 'Meeting exact specifications and customer requirements',
     'about.values.expertise': 'Industry Expertise',
     'about.values.expertiseDesc': 'Years of specialized knowledge',
     'about.credentials.title': 'Our Credentials',
@@ -107,7 +112,8 @@ const translations: Record<Language, Record<string, string>> = {
     'brands.title': 'Trusted',
     'brands.titleHighlight': 'Brands',
     'brands.subtitle': 'We partner with industry-leading manufacturers to bring you the best quality products',
-    
+    'brands.quality.text': 'As an authorized distributor of these premium brands, we guarantee 100% authentic products with full manufacturer warranties and technical support. Our extensive inventory ensures immediate availability for most products.',
+
     // Contact
     'contact.title': 'Get In',
     'contact.titleHighlight': 'Touch',
@@ -124,13 +130,15 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.cta.text': 'Contact us today for quotes, product availability, or technical specifications. Our experienced team is here to help you find the perfect industrial spare parts solution.',
     'contact.cta.call': 'Call Now',
     'contact.cta.email': 'Send Email',
-    'contact.registration': 'CR: 1010434046 | VAT: 310460641800003',
+    'contact.registration': 'FAL ARABIYAH TRADING EST. | CR: 1010726314 | Kingdom of Saudi Arabia',
+    'contact.cr': 'CR: 1010726314',
     
     // Footer
     'footer.tagline': 'Your Partner in Industrial Spare Parts',
-    'footer.description': 'Leading supplier of quality industrial spare parts in Saudi Arabia',
+    'footer.description': 'Your trusted partner for industrial spare parts in Saudi Arabia. Quality products and excellent service since 2015.',
     'footer.quickLinks': 'Quick Links',
     'footer.followUs': 'Follow Us',
+    'footer.titleHighlight': 'FAL ARABIYAH Trading Est',
     'footer.rights': 'All rights reserved.',
   },
   ar: {
@@ -142,8 +150,9 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'اتصل بنا',
     
     // Hero
+    'hero.top.title': 'قطع غيار صناعية',
     'hero.title': 'شريكك في قطع الغيار الصناعية',
-    'hero.subtitle': 'شركة راسخة ومشهورة بسجل ممتاز في رضا العملاء، لم نتنازل أبدًا عن الجودة والخدمة',
+    'hero.subtitle': 'شركة عريقة ومشهورة، تتمتع بسجل حافل من النجاح في تحقيق رضا العملاء. نلتزم دائمًا بالجودة والخدمة المُقدمة لعملائنا بأسعار تنافسية للغاية.',
     'hero.cta': 'استكشف المنتجات',
     'hero.contact': 'اتصل بنا',
     'hero.stats.experience': 'سنوات من الخبرة',
@@ -155,12 +164,16 @@ const translations: Record<Language, Record<string, string>> = {
     'about.title': 'حول',
     'about.titleHighlight': 'الفأل العربية',
     'about.story.title': 'قصتنا',
-    'about.story.text': 'الفأل العربية هي اسم موثوق في قطع الغيار الصناعية منذ سنوات. نحن متخصصون في توفير منتجات عالية الجودة للصناعات في جميع أنحاء المملكة العربية السعودية، مع الحفاظ على أعلى معايير الخدمة والموثوقية.',
+    'about.story.title.text': 'يقع مقرنا في شارع السكة الحديد، البطحاء، الرياض، ونقوم بتوريد المواد الصناعية بتميز منذ ما يقرب من عقد من الزمان',
+    'about.story.text': 'الفأل العربية مؤسسة تجارية هي اسم موثوق في قطع الغيار الصناعية منذ سنوات. نحن متخصصون في توفير منتجات عالية الجودة للصناعات في جميع أنحاء المملكة العربية السعودية، مع الحفاظ على أعلى معايير الخدمة والموثوقية.',
     'about.values.title': 'قيمنا الأساسية',
+    'about.values.subtitle': 'المبادئ التي تدفع التزامنا بالتميز',
     'about.values.quality': 'جودة متميزة',
     'about.values.qualityDesc': 'منتجات معتمدة ومختبرة فقط',
     'about.values.reliability': 'خدمة موثوقة',
     'about.values.reliabilityDesc': 'التسليم في الوقت المحدد والدعم',
+    'about.values.precision': 'دقة',
+    'about.values.precisionDesc': 'تلبية المواصفات الدقيقة ومتطلبات العملاء',
     'about.values.expertise': 'خبرة صناعية',
     'about.values.expertiseDesc': 'سنوات من المعرفة المتخصصة',
     'about.credentials.title': 'اعتماداتنا',
@@ -194,6 +207,7 @@ const translations: Record<Language, Record<string, string>> = {
     'brands.title': 'علامات تجارية',
     'brands.titleHighlight': 'موثوقة',
     'brands.subtitle': 'نتعاون مع الشركات المصنعة الرائدة في الصناعة لنقدم لك أفضل المنتجات',
+    'brands.quality.text': 'بصفتنا موزعًا معتمدًا لهذه العلامات التجارية الفاخرة، نضمن منتجات أصلية 100% مع ضمان كامل من الشركة المصنعة ودعم فني. يضمن مخزوننا الواسع توفر معظم المنتجات فورًا.',
     
     // Contact
     'contact.title': 'تواصل',
@@ -211,13 +225,15 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.cta.text': 'اتصل بنا اليوم للحصول على عروض الأسعار أو توافر المنتجات أو المواصفات الفنية. فريقنا ذو الخبرة هنا لمساعدتك في العثور على الحل المثالي لقطع الغيار الصناعية.',
     'contact.cta.call': 'اتصل الآن',
     'contact.cta.email': 'أرسل بريد إلكتروني',
-    'contact.registration': 'س.ت: 1010434046 | ضريبة: 310460641800003',
+    'contact.registration': 'فال العربية مؤسسة تجارية | س.ت: 1010726314 | المملكة العربية السعودية',
+    'contact.cr': 'س.ت: 1010726314',
     
     // Footer
     'footer.tagline': 'شريكك في قطع الغيار الصناعية',
-    'footer.description': 'المورد الرائد لقطع الغيار الصناعية عالية الجودة في المملكة العربية السعودية',
+    'footer.description': 'شريككم الموثوق لقطع الغيار الصناعية في المملكة العربية السعودية. منتجات عالية الجودة وخدمة ممتازة منذ عام ٢٠١٥.',
     'footer.quickLinks': 'روابط سريعة',
     'footer.followUs': 'تابعنا',
+    'footer.titleHighlight': 'فال العربية مؤسسة تجارية',
     'footer.rights': 'جميع الحقوق محفوظة.',
   }
 };

@@ -13,8 +13,8 @@ export const About = () => {
     },
     {
       icon: Target,
-      title: t('about.values.reliability'),
-      description: t('about.values.reliabilityDesc')
+      title: t('about.values.precision'),
+      description: t('about.values.precisionDesc')
     },
     {
       icon: TrendingUp,
@@ -38,7 +38,7 @@ export const About = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6 rounded-full" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t('about.story.text')}
+            {t('about.story.title.text')}
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export const About = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">{t('about.companyInfo.website')}</p>
-                  <p className="font-semibold text-primary">www.falarabiya.com</p>
+                  <p className="font-semibold text-primary">www.falarabiyah.com</p>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ export const About = () => {
             {t('about.values.title')}
           </h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            {t('hero.subtitle')}
+            {t('about.values.subtitle')}
           </p>
         </div>
 

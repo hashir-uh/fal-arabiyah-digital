@@ -42,7 +42,7 @@ export const Hero = () => {
         <div className="text-center mb-8 animate-slide-up">
           <div className="inline-block px-6 py-2 bg-accent/90 backdrop-blur-sm rounded-full shadow-glow">
             <p className="text-primary-foreground font-bold tracking-wider text-sm md:text-base font-['Rajdhani']">
-              {t('hero.title').toUpperCase()}
+              {t('hero.top.title').toUpperCase()}
             </p>
           </div>
         </div>

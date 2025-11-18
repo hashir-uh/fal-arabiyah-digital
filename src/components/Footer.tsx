@@ -18,7 +18,7 @@ export const Footer = () => {
               {t('footer.description')}
             </p>
             <p className="text-sm text-primary-foreground/60">
-              {t('contact.registration')}
+              {t('contact.cr')}
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-bold mb-4 font-['Rajdhani']">
-              {t('nav.contact')}
+              {t('hero.contact')}
             </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
@@ -88,10 +88,10 @@ export const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/60 text-sm text-center md:text-left">
-              © {currentYear} {t('about.titleHighlight')}. {t('footer.rights')}
+              © {currentYear} {t('footer.titleHighlight')}. {t('footer.rights')}
             </p>
             <p className="text-primary-foreground/60 text-sm text-center md:text-right">
-              Website: <a href="https://www.falarabiya.com" className="text-accent hover:underline">www.falarabiya.com</a>
+              Website: <a href="https://www.falarabiyah.com" className="text-accent hover:underline">www.falarabiyah.com</a>
             </p>
           </div>
         </div>

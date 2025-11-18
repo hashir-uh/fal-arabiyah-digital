@@ -29,7 +29,7 @@ export const Brands = () => {
             {t('brands.title')} <span className="text-gradient">{t('brands.titleHighlight')}</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6 rounded-full" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t('brands.subtitle')}
           </p>
         </div>
@@ -60,7 +60,7 @@ export const Brands = () => {
               {t('about.credentials.2')}
             </h3>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              {t('products.quality.text')}
+              {t('brands.quality.text')}
             </p>
           </div>
         </Card>
